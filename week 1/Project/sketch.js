@@ -1,4 +1,5 @@
 var userInput = window.prompt("What's your name?");
+var userColor = window.prompt("What color do you like?")
 function setup() {
   //Set Up canvas and background
   createCanvas(600, 600);
@@ -15,19 +16,30 @@ function draw() {
 }
 
 function drawCreature(){
-  //Draws Snow Creature
+  //Draws Snow Creature body
   fill(255);
   stroke(220,220,220);
   strokeWeight(6);
   circle(200, 320, 80);
+  stroke(0);
+  //Arms
+  line(210,260,275,255);
+  line(275,255,278,252);
+  line(275,255,277,258);
+  line(210,260,145,258);
+  line(145,258,142,256);
+  line(145,258,142,259);
+  stroke(220);
   circle(210, 260, 60);
   //scarf
-  stroke(255, 40, 40);
-  fill(255,0,0);
+  //stroke(255, 40, 40);
+  strokeWeight(0);
+  fill(userColor);
   quad(210, 230, 245,260, 215, 265, 190, 230);
   //head
   fill(255);
   stroke(220,220,220);
+  strokeWeight(6);
   circle(200, 230, 40);
   fill(0);
   strokeWeight(0);
