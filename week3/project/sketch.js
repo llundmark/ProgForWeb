@@ -15,6 +15,7 @@ function draw() {
 }
 
 function drawBranch(lineWeight, branchColor, lineLength, branchDepth, branchRotation){
+  //semi-random color for circle at end of branch
   let circleColor = color(
     (200 + Math.floor(Math.random() * 56)),
     (Math.floor(Math.random() * 255)),
@@ -27,7 +28,7 @@ function drawBranch(lineWeight, branchColor, lineLength, branchDepth, branchRota
     //translate origin to end of line
     push();
     translate(lineLength, 0);
-    //branchColor.setRed(red(branchColor) - 1);
+    //Branch starts off at Red, becomes more orange each iteration
     branchColor.setGreen(green(branchColor) + 5);
     //rotate 45 degrees and draw new branch
     push();
@@ -45,6 +46,7 @@ function drawBranch(lineWeight, branchColor, lineLength, branchDepth, branchRota
     pop();
   }
   else{
+    //At end of the branch, draw a circle
     push();
     noFill();
     stroke(circleColor);
