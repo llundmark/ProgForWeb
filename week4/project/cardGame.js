@@ -1,11 +1,8 @@
 const cardSide = 100;
 const gutterSize = 20;
+const deckSize = 16;
 
-/*let card = {
-
-};
-
-let deck = [];*/
+let deck = [];
 
 function setup() {
   createCanvas(500, 650);
@@ -13,8 +10,15 @@ function setup() {
 
 function draw() {
   background(220);
+  //fillDeck();
   translate(gutterSize, 150);
   drawDeck();
+}
+
+function fillDeck(){
+  for(let x = 0; x < deckSize; x++){
+    deck.push({index: x});
+  }
 }
 
 function drawDeck(){
