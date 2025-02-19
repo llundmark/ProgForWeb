@@ -12,6 +12,14 @@ function drawSquare(originX, originY, color){
   strokeWeight(0);
   fill(color || 255);
   square(originX, originY, length);
+
+  //check if square y value has reached edge,
+  //if so reset x and y value
+  if(squareY >= height){
+    window.clearInterval(drawTimer);
+    window.alert("done");
+  }
+  
   //check if square x value has reached edge,
   //if so reset x value and increment y value
   if(squareX < width){
@@ -20,12 +28,6 @@ function drawSquare(originX, originY, color){
   else{
     squareX = 0;
     squareY += length;
-  }
-  //check if square y value has reached edge,
-  //if so reset x and y value
-  if(squareY >= height){
-    window.clearInterval(drawTimer);
-    window.alert("done");
   }
 }
 
