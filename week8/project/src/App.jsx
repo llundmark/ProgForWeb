@@ -53,19 +53,20 @@ function App() {
     collected : true
   }
   ]);
-
+  //remove game entry from list
   function deleteGame(name) {
     const updatedArray = gamesArray.filter((game) => {
       return game.name !== name;
     });
     setGamesArray(updatedArray);
   }
-
+  //duplicate game entry and add to end of list
   function duplicateGame(name){
-    const updatedArray = gamesArray.filter((game) => {
-      return game.name !== name;
+    const matchingGame = gamesArray.find((game) => {
+      return game.name === name;
     });
-    setGamesArray(updatedArray);
+    //matchingGame.index = gamesArray.length;
+    setGamesArray([...gamesArray, matchingGame]);
   }
 
   return (
