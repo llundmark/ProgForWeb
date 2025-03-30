@@ -55,3 +55,34 @@ td {
 body{
   background-color: #b3ffff;
 }
+
+.form-group{
+  display:flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.input-form{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label{
+  margin-right: 10px;
+}
+
+.required::before{
+  content: "*";
+  color:red;
+
+}
+
+.error{
+  color:red;
+}
+
+.new-game-form{
+  max-width: 500px;
+  margin: 10px auto;
+}
