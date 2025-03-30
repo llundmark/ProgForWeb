@@ -2,6 +2,7 @@ import './App.css'
 import Game from './Game.jsx'
 import { useState } from 'react';
 import {useForm} from 'react-hook-form';
+import { useEffect } from 'react';
 
 function App() {
   //Array for list of Games
@@ -55,7 +56,7 @@ function App() {
   }
   ]);
 
-  const {register, handleSubmit, formState: {errors}} = useForm();
+  const {register, handleSubmit,  reset, formState: {errors}} = useForm();
   //remove game entry from list
   function deleteGame(name) {
     const updatedArray = gamesArray.filter((game) => {
@@ -72,6 +73,7 @@ function App() {
     setGamesArray([...gamesArray, matchingGame]);
   }
 
+  
   //Adds new game entry------------
   function addGame(data){
     console.log(data);
@@ -86,6 +88,7 @@ function App() {
       newGame.collected = true;
     }
     setGamesArray([...gamesArray, newGame]);
+    reset();
   }
 
   return (
