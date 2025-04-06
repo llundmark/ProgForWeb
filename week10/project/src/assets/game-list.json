@@ -1,0 +1,55 @@
+[
+    {
+    "slug": "luigis-mansion",
+    "index": 1,
+    "name": "Luigi's Mansion",
+    "releaseDate": "2001",
+    "genre": "3D Action Platformer",
+    "collected" : false
+  },
+
+  {
+    "slug": "ssb-melee",
+    "index": 2,
+    "name": "Super Smash Bros. Melee",
+    "releaseDate": "2001",
+    "genre": "Fighter",
+    "collected" : false
+  },
+
+  {
+    "slug": "metroid-prime",
+    "index": 3,
+    "name": "Metroid Prime",
+    "releaseDate": "2002",
+    "genre": "First-Person Shooter",
+    "collected" : false
+  },
+
+  {
+    "slug": "loz-windwaker",
+    "index": 4,
+    "name": "The Legend of Zelda: Wind Waker",
+    "releaseDate": "2002",
+    "genre": "3D Action Platformer",
+    "collected" : false
+  },
+
+  {
+    "slug": "pikmin",
+    "index": 5,
+    "name": "Pikmin",
+    "releaseDate": "2001",
+    "genre": "Adventure RTS",
+    "collected" : false
+  },
+  
+  {
+    "slug": "mario-sunshine",
+    "index": 6,
+    "name": "Super Mario Sunshine",
+    "releaseDate": "2002",
+    "genre": "3D Action Platformer",
+    "collected" : true
+  }
+]
